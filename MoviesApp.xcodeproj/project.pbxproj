@@ -13,6 +13,7 @@
 		8430F2F524C3111600A42AFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8430F2F324C3111600A42AFA /* Main.storyboard */; };
 		8430F2F724C3111800A42AFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8430F2F624C3111800A42AFA /* Assets.xcassets */; };
 		8430F2FA24C3111800A42AFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8430F2F824C3111800A42AFA /* LaunchScreen.storyboard */; };
+		8430F30524C312ED00A42AFA /* MovieResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430F30424C312ED00A42AFA /* MovieResults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8430F2F624C3111800A42AFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8430F2F924C3111800A42AFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8430F2FB24C3111800A42AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8430F30424C312ED00A42AFA /* MovieResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,9 @@
 		8430F2EC24C3111600A42AFA /* MoviesApp */ = {
 			isa = PBXGroup;
 			children = (
+				8430F30324C3127100A42AFA /* ViewController */,
+				8430F30224C3126400A42AFA /* Model */,
+				8430F30124C3125400A42AFA /* Storyboard */,
 				8430F2ED24C3111600A42AFA /* AppDelegate.swift */,
 				8430F2EF24C3111600A42AFA /* SceneDelegate.swift */,
 				8430F2F124C3111600A42AFA /* ViewController.swift */,
@@ -65,6 +70,28 @@
 				8430F2FB24C3111800A42AFA /* Info.plist */,
 			);
 			path = MoviesApp;
+			sourceTree = "<group>";
+		};
+		8430F30124C3125400A42AFA /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		8430F30224C3126400A42AFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8430F30424C312ED00A42AFA /* MovieResults.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8430F30324C3127100A42AFA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +168,7 @@
 				8430F2F224C3111600A42AFA /* ViewController.swift in Sources */,
 				8430F2EE24C3111600A42AFA /* AppDelegate.swift in Sources */,
 				8430F2F024C3111600A42AFA /* SceneDelegate.swift in Sources */,
+				8430F30524C312ED00A42AFA /* MovieResults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
