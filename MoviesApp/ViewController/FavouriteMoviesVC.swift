@@ -23,6 +23,8 @@ class FavouriteMoviesVC: UIViewController {
             favMovie = favMovies
             if favMovies.count > 0 {
                 lblNoMovies.isHidden = true
+            } else {
+                lblNoMovies.isHidden = false
             }
             updateTableView()
         }
@@ -34,6 +36,8 @@ class FavouriteMoviesVC: UIViewController {
         }
     }
 }
+
+// MARK: Table View Delegates
 
 extension FavouriteMoviesVC:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
