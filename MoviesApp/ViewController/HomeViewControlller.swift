@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
     }
 }
 
+// MARK: Table View Delegates
 extension HomeViewController:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrMovieList?.count ?? 5
