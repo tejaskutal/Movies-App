@@ -46,7 +46,6 @@ class NetworkClient: NSObject {
     
     // This function first checks if there is a image available in the cache before downloading it.
     func getImage(_ urlString: String, closure: @escaping (UIImage?) -> ()) {
-        print("get image called..")
         if let image = cache.object(forKey: urlString as NSString) {
             closure(image)
         } else {

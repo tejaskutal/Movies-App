@@ -5,11 +5,12 @@
     </entity>
     <entity name="MovieFavourite" representedClassName="MovieFavourite" syncable="YES" codeGenerationType="class">
         <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="releaseDate" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="Movie" positionX="-63" positionY="-18" width="128" height="58"/>
-        <element name="MovieFavourite" positionX="-63" positionY="-9" width="128" height="88"/>
+        <element name="MovieFavourite" positionX="-63" positionY="-9" width="128" height="103"/>
     </elements>
 </model>

@@ -55,14 +55,12 @@ extension HomeViewController:UITableViewDelegate, UITableViewDataSource {
         alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { _ in
             print("YES")
             let cell = self.tableView.cellForRow(at: indexPath) as! MovieTableViewCell
+            let selectedMovie: MovieInfo = (self.arrMovieList?[indexPath.row])!
             print(cell.lblMovieTitle.text!)
             DispatchQueue.main.async {
-                guard let favMovie = CoreDataManager.shared.createFavMovie(name: cell.lblMovieTitle.text!, releaseDate: cell.lblReleaseDate.text!, description: cell.lblDescription.text!) else { return }
+                guard let favMovie = CoreDataManager.shared.createFavMovie(name: cell.lblMovieTitle.text!, releaseDate: cell.lblReleaseDate.text!, description: cell.lblDescription.text!, imageUrl: selectedMovie.poster_path!) else { return }
                 print(favMovie)
-                
             }
-            
-            
         }))
         alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: { _ in
             print("NO")

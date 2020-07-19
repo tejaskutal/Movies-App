@@ -43,13 +43,14 @@ struct CoreDataManager {
     }
     
     // FAVOURITE MOVIES
-    func createFavMovie(name: String, releaseDate: String, description: String) -> MovieFavourite? {
+    func createFavMovie(name: String, releaseDate: String, description: String, imageUrl: String) -> MovieFavourite? {
         let context = persistentContainer.viewContext
         
         let movie = NSEntityDescription.insertNewObject(forEntityName: "MovieFavourite", into: context) as! MovieFavourite // NSManagedObject
         movie.name = name
         movie.releaseDate = releaseDate
         movie.desc = description
+        movie.imageUrl = imageUrl
 
         do {
             try context.save()
@@ -75,6 +76,16 @@ struct CoreDataManager {
         }
 
         return nil
+    }
+    
+    func deleteMovie(movie: MovieFavourite) {
+        let context = persistentContainer.viewContext
+        context.delete(movie)
+        do {
+            try context.save()
+        } catch let saveError {
+            print("Failed to delete: \(saveError)")
+        }
     }
 }
 
